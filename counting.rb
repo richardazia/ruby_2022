@@ -382,7 +382,6 @@ response = gets.chomp
 puts "Your shoe size is #{response}!"
 
 # Guessing game challenge
-# Ask for the name
 # Explain the rules
 
 # Pick a random number and the user has to guess
@@ -393,3 +392,26 @@ puts "Your shoe size is #{response}!"
 #rand number
 
 # rand(100)
+puts "**********************************"
+puts "*                                *"
+puts "*       Guess The number         *"
+puts "*       Between 1 and 10         *"
+puts "*                                *"
+puts "**********************************"
+# Ask for the name
+print "What is your nickname? "
+i = 3
+name = gets.chomp
+toGuess = (rand(10)+1)
+puts "Hello #{name}, I now have my number"
+3.times do |i|
+  print "Please provide me with your guess between 1-10: "
+  guess = gets.chomp
+  if toGuess == guess
+    puts "Congratulations, your guess was correct"
+  else
+    puts "Try again"
+    puts "Better luck next time"
+  end
+  puts "The number to guess was #{toGuess}"
+end
